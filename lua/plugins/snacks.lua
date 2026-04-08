@@ -103,6 +103,7 @@ return {
 						-- ["<C-l>"] = { "confirm", mode = { "i", "n" } },
 						-- ["<D-l>"] = { "confirm", mode = { "i", "n" } },
 						["<D-p>"] = { "close", mode = { "i", "n" } },
+						["<C-p>"] = { "close", mode = { "i", "n" } },
 					},
 				},
 			},
@@ -125,6 +126,7 @@ return {
 			win = {
 				keys = {
 					["<D-g>"] = { "close", mode = { "i", "n", "t" } },
+					["<C-g>"] = { "close", mode = { "i", "n", "t" } },
 				},
 			},
 		},
@@ -150,6 +152,13 @@ return {
 
 	keys = {
 		-- Picker (telescope replacements)
+		{
+			"<C-p>",
+			function()
+				Snacks.picker.files()
+			end,
+			desc = "[S]earch [F]iles",
+		},
 		{
 			"<D-p>",
 			function()
@@ -282,6 +291,13 @@ return {
 
 		-- Explorer (neo-tree replacements)
 		{
+			"<C-b>",
+			function()
+				Snacks.explorer.open()
+			end,
+			desc = "Toggle Explorer",
+		},
+		{
 			"<D-b>",
 			function()
 				Snacks.explorer.open()
@@ -306,6 +322,13 @@ return {
 		-- New features
 		{
 			"<leader>lg",
+			function()
+				Snacks.lazygit.open()
+			end,
+			desc = "[L]azy[G]it",
+		},
+		{
+			"<C-g>",
 			function()
 				Snacks.lazygit.open()
 			end,
