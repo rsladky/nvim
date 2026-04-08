@@ -106,6 +106,12 @@ return {
 						["<C-p>"] = { "close", mode = { "i", "n" } },
 					},
 				},
+				list = {
+					keys = {
+						["<D-b>"] = "close",
+						["<C-b>"] = "close",
+					},
+				},
 			},
 		},
 
@@ -347,6 +353,22 @@ return {
 				Snacks.terminal.toggle()
 			end,
 			desc = "[F]loating [T]erminal",
+		},
+		{
+			"<C-j>",
+			function()
+				Snacks.terminal.toggle(nil, { win = { position = "bottom", height = 0.3 } })
+			end,
+			desc = "Toggle Bottom Terminal",
+			mode = { "n", "t" },
+		},
+		{
+			"<D-j>",
+			function()
+				Snacks.terminal.toggle(nil, { win = { position = "bottom", height = 0.3 } })
+			end,
+			desc = "Toggle Bottom Terminal",
+			mode = { "n", "t" },
 		},
 		{
 			"<leader>gb",
