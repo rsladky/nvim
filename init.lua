@@ -29,7 +29,7 @@ require("lazy").setup({
 	require("plugins.undotree"),
 	require("plugins.obsidian"),
 	require("plugins.render-markdown"),
-	require("plugins.opencode"),
+	-- require("plugins.opencode"),
 	-- require("plugins.alpha"),           -- REPLACED by snacks.dashboard
 	-- require("plugins.indent-blankline"),-- REPLACED by snacks.indent
 	-- require("plugins.neotree"),         -- REPLACED by snacks.explorer
